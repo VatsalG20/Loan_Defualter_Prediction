@@ -65,4 +65,6 @@ if st.button('Predict'):
         st.subheader('User Input features')
         st.write(df)
         prediction = load_clf.predict(df)
+        skip = np.array(['Skipped','Not Skipped'])
+        st.write(skip[prediction])
         st.success(classify(load_clf.predict(df)))
